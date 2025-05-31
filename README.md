@@ -12,7 +12,7 @@ A comprehensive email composition component for WeWeb that provides advanced rec
 ### 👥 Recipient Management
 - **Smart recipient search** with dropdown selection
 - **TO/CC/BCC fields** with show/hide toggle
-- **Email parsing** - paste "Dylan Halliday <dylan@test.com>" format
+- **Email parsing** - paste "Joe Bloggs <joe@test.com>" format
 - **Create new recipients** with sliding panel form
 - **Dynamic form builder** for recipient creation
 
