@@ -24,12 +24,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/weweb-email-composer.git"
+    "url": "https://github.com/Dylzzzzz/weweb-email-composer.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/weweb-email-composer/issues"
+    "url": "https://github.com/Dylzzzzz/weweb-email-composer/issues"
   },
-  "homepage": "https://github.com/yourusername/weweb-email-composer#readme",
+  "homepage": "https://github.com/Dylzzzzz/weweb-email-composer#readme",
   "peerDependencies": {
     "vue": "^3.0.0",
     "@weweb/core": "*"
