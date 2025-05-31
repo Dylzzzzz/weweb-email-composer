@@ -1,0 +1,61 @@
+{
+  "name": "weweb-email-composer",
+  "version": "1.0.0",
+  "description": "Advanced email composer component for WeWeb with recipient management, templates, merge fields, and attachments",
+  "main": "ww-config.js",
+  "type": "module",
+  "scripts": {
+    "dev": "weweb serve",
+    "build": "weweb build",
+    "publish": "weweb publish"
+  },
+  "keywords": [
+    "weweb",
+    "email",
+    "composer",
+    "component",
+    "recipients",
+    "templates",
+    "attachments",
+    "merge-fields",
+    "vue3"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/weweb-email-composer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/weweb-email-composer/issues"
+  },
+  "homepage": "https://github.com/yourusername/weweb-email-composer#readme",
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "@weweb/core": "*"
+  },
+  "devDependencies": {
+    "@weweb/cli": "latest"
+  },
+  "weweb": {
+    "componentType": "element",
+    "category": "forms",
+    "icon": "mail",
+    "displayName": "Email Composer",
+    "description": "Complete email composition with recipient search, templates, merge fields, and file attachments",
+    "tags": [
+      "email",
+      "form",
+      "communication",
+      "templates",
+      "attachments"
+    ],
+    "compatibility": {
+      "minVersion": "4.0.0"
+    }
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
