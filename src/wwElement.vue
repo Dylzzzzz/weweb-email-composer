@@ -193,10 +193,10 @@
 </template>
 
 <script>
-import RecipientInput from './components/RecipientInput.vue'
-import SlidePanel from './components/SlidePanel.vue'
-import CreateRecipientForm from './components/CreateRecipientForm.vue'
-import AttachmentManager from './components/AttachmentManager.vue'
+import RecipientInput from '../components/RecipientInput.vue'
+import SlidePanel from '../components/SlidePanel.vue'
+import CreateRecipientForm from '../components/CreateRecipientForm.vue'
+import AttachmentManager from '../components/AttachmentManager.vue'
 
 export default {
   name: 'WwEmailComposer',
