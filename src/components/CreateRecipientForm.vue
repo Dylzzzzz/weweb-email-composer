@@ -252,11 +252,11 @@
         const value = this.formData[field.name]
         
         // Clear previous error
-        this.$delete(this.fieldErrors, field.name)
+        delete this.fieldErrors[field.name];
         
         // Required field validation
         if (field.required && (!value || value.toString().trim() === '')) {
-          this.$set(this.fieldErrors, field.name, `${field.label} is required`)
+          this.fieldErrors[field.name] =`${field.label} is required`;
           return
         }
         
@@ -264,7 +264,7 @@
         if (field.type === 'email' && value) {
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
           if (!emailRegex.test(value)) {
-            this.$set(this.fieldErrors, field.name, 'Please enter a valid email address')
+            this.fieldErrors[field.name] = 'Please enter a valid email address';
             return
           }
         }
@@ -273,7 +273,7 @@
         if (field.type === 'tel' && value) {
           const phoneRegex = /^[\+]?[\d\s\-\(\)]+$/
           if (!phoneRegex.test(value)) {
-            this.$set(this.fieldErrors, field.name, 'Please enter a valid phone number')
+            this.fieldErrors[field.name] ='Please enter a valid phone number';
             return
           }
         }
@@ -282,17 +282,17 @@
         if (field.type === 'number' && value !== undefined && value !== null) {
           const numValue = Number(value)
           if (isNaN(numValue)) {
-            this.$set(this.fieldErrors, field.name, 'Please enter a valid number')
+            this.fieldErrors[field.name] ='Please enter a valid number';
             return
           }
           
           if (field.min !== undefined && numValue < field.min) {
-            this.$set(this.fieldErrors, field.name, `Value must be at least ${field.min}`)
+            this.fieldErrors[field.name] =`Value must be at least ${field.min}`;
             return
           }
           
           if (field.max !== undefined && numValue > field.max) {
-            this.$set(this.fieldErrors, field.name, `Value must be at most ${field.max}`)
+            this.fieldErrors[field.name] =`Value must be at most ${field.max}`;
             return
           }
         }
@@ -301,7 +301,7 @@
         if (field.validator && typeof field.validator === 'function') {
           const validationResult = field.validator(value)
           if (validationResult !== true) {
-            this.$set(this.fieldErrors, field.name, validationResult)
+            this.fieldErrors[field.name] =validationResult;
           }
         }
       },
@@ -374,15 +374,15 @@
         this.customFields.push(newField)
         
         // Initialize form data for the new field
-        this.$set(this.formData, fieldName, fieldType.type === 'checkbox' ? false : '')
+        this.formData[fieldName] = fieldType.type === 'checkbox' ? false : '';
       },
       
       removeCustomField(index) {
         const field = this.customFields[index]
         
         // Remove from form data and errors
-        this.$delete(this.formData, field.name)
-        this.$delete(this.fieldErrors, field.name)
+        delete this.formData[field.name];
+        delete this.fieldErrors[field.name];
         
         // Remove from custom fields
         this.customFields.splice(index, 1)
@@ -406,7 +406,7 @@
               defaultValue = field.default || ''
           }
           
-          this.$set(this.formData, field.name, defaultValue)
+          this.formData[field.name] = defaultValue;
         }
       })
     }
