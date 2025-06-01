@@ -8,7 +8,8 @@ This document provides guidance for AI assistants working with the WeWeb Email C
 ### Core Files Structure
 ```
 weweb-email-composer/
-├── wwElement.vue          # Main component
+├── components/
+│   ├── wwElement.vue          # Main component
 ├── ww-config.js          # WeWeb configuration
 ├── package.json          # Package configuration
 ├── components/
