@@ -240,9 +240,11 @@ export default {
       }
     },
     recipientsList() {
+      if (!this.wwLib) return [];
       return this.wwLib.resolveValue(this.content.recipientDataSource) || []
     },
     templatesList() {
+      if (!this.wwLib) return [];
       return this.wwLib.resolveValue(this.content.templatesDataSource) || []
     },
     canSend() {
@@ -362,6 +364,7 @@ export default {
     
     // Utility Methods
     getDataSourceItems(dataSource) {
+      if (!this.wwLib) return [];
       return this.wwLib.resolveValue(dataSource) || []
     },
     

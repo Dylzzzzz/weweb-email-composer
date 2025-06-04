@@ -20,7 +20,7 @@
     "merge-fields",
     "vue3"
   ],
-  "author": "Your Name",
+  "author": "Dylan Halliday",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -31,11 +31,11 @@
   },
   "homepage": "https://github.com/Dylzzzzz/weweb-email-composer#readme",
   "peerDependencies": {
-    "vue": "^3.0.0",
-    "@weweb/core": "*"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@weweb/cli": "latest"
+    "@weweb/cli": "latest",
+    "webpack-cli": "^6.0.1"
   },
   "weweb": {
     "componentType": "element",
